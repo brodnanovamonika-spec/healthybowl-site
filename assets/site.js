@@ -20,6 +20,12 @@
     $$("a", nav).forEach(function (a) { a.addEventListener("click", function () { nav.classList.remove("open"); burger.setAttribute("aria-expanded", "false"); }); });
   }
 
+
+  /* ukazovatel posunu stranky */
+  var pb = doc.createElement("div"); pb.className = "pbar"; pb.setAttribute("aria-hidden", "true"); doc.body.appendChild(pb);
+  function prog() { var h = root.scrollHeight - window.innerHeight; pb.style.transform = "scaleX(" + (h > 0 ? Math.min(window.scrollY / h, 1) : 0) + ")"; }
+  window.addEventListener("scroll", prog, { passive: true }); prog();
+
   /* odhalovanie pri scrolle */
   var rv = $$(".rv");
   if (!("IntersectionObserver" in window) || reduce) {

@@ -1,0 +1,131 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>User guide | Healthy Bowl</title><meta name="description" content="How to use the Healthy Bowl app: today's bowl, calendar, shopping list, favourites, settings and FAQ."><meta name="robots" content="index,follow">
+<link rel="icon" href="../../img/icon-192.png">
+<link rel="preload" href="../../fonts/Cormorant-normal-latin.woff2" as="font" type="font/woff2" crossorigin>
+<style>@font-face{font-family:"Cormorant Garamond";font-style:normal;font-weight:300 700;font-display:swap;src:url("../../fonts/Cormorant-normal-latin.woff2") format("woff2")}
+@font-face{font-family:"Cormorant Garamond";font-style:italic;font-weight:300 700;font-display:swap;src:url("../../fonts/Cormorant-italic-latin.woff2") format("woff2")}
+
+:root{--canvas:#F3EEE2;--paper:#FBF8F0;--ink:#0B1D17;--ink2:#4A5A52;--gold:#A8843C;--gold2:#DCC283;--forest:#0B1D17;--line:#DDD5C0;--serif:"Cormorant Garamond",Georgia,serif}
+@media(prefers-color-scheme:dark){:root{--canvas:#08130F;--paper:#0F1D17;--ink:#F1EBDA;--ink2:#A9B3AB;--gold:#DCC283;--line:#22332B}}
+*{box-sizing:border-box}html{scroll-behavior:smooth}
+body{margin:0;background:var(--canvas);color:var(--ink);font:17px/1.7 Inter,system-ui,sans-serif;-webkit-font-smoothing:antialiased}
+a{color:var(--gold);text-underline-offset:3px}
+.hd{background:var(--forest);color:#F6F1E4;padding:18px 0}
+.hd .in{max-width:1180px;margin:0 auto;padding:0 24px;display:flex;justify-content:space-between;align-items:center;gap:16px}
+.hd a{color:#F6F1E4;text-decoration:none;font-size:12px;font-weight:600;letter-spacing:.16em;text-transform:uppercase}
+.hd .logo{font-family:var(--serif);font-size:26px;font-weight:500;letter-spacing:0;text-transform:none}
+.hd .logo em{color:var(--gold2);font-weight:400}
+.hd .r{display:flex;gap:22px;align-items:center}
+.hero{background:radial-gradient(120% 140% at 100% 0%,#1D5B42,#0B1D17 62%);color:#F6F1E4;padding:clamp(54px,9vw,110px) 0 clamp(46px,7vw,84px)}
+.hero .in{max-width:1180px;margin:0 auto;padding:0 24px}
+.eb{font-size:11px;font-weight:600;letter-spacing:.26em;text-transform:uppercase;color:var(--gold2);display:flex;gap:14px;align-items:center;margin-bottom:18px}
+.eb:before{content:"";width:34px;height:1px;background:var(--gold2)}
+h1{font-family:var(--serif);font-weight:300;font-size:clamp(46px,8vw,92px);line-height:.98;letter-spacing:-.02em;margin:0 0 20px}
+h1 em{font-style:italic;font-weight:400;color:var(--gold2)}
+.lead{max-width:36em;font-size:clamp(17px,2vw,20px);color:rgba(246,241,228,.8);margin:0}
+.wrap{max-width:1180px;margin:0 auto;padding:clamp(34px,6vw,72px) 24px 80px;display:grid;grid-template-columns:240px minmax(0,1fr);gap:clamp(28px,6vw,80px)}
+.toc{position:sticky;top:24px;align-self:start}
+.toc b{display:block;font-size:11px;letter-spacing:.24em;text-transform:uppercase;color:var(--gold);margin-bottom:14px}
+.toc a{display:block;color:var(--ink2);text-decoration:none;font-size:14.5px;padding:7px 0 7px 14px;border-left:1px solid var(--line)}
+.toc a:hover{color:var(--ink);border-left-color:var(--gold)}
+article{min-width:0}
+section{padding-bottom:clamp(30px,5vw,54px);margin-bottom:clamp(30px,5vw,54px);border-bottom:1px solid var(--line);scroll-margin-top:20px}
+section:last-of-type{border-bottom:0}
+.n{font-family:var(--serif);font-style:italic;font-size:22px;color:var(--gold);display:block;margin-bottom:4px}
+h2{font-family:var(--serif);font-weight:400;font-size:clamp(34px,4.6vw,52px);line-height:1.02;margin:0 0 18px;letter-spacing:-.01em}
+h3{font-size:12px;letter-spacing:.2em;text-transform:uppercase;font-weight:600;color:var(--gold);margin:28px 0 10px}
+p,li{color:var(--ink2)}li{margin:7px 0}b{color:var(--ink);font-weight:600}
+ul,ol{padding-left:22px}
+details{border-top:1px solid var(--line);padding:6px 0}details:last-child{border-bottom:1px solid var(--line)}
+summary{cursor:pointer;font-family:var(--serif);font-size:23px;color:var(--ink);padding:12px 36px 12px 0;list-style:none;position:relative}
+summary::-webkit-details-marker{display:none}
+summary:after{content:"+";position:absolute;right:4px;top:10px;font-family:Inter,sans-serif;font-size:22px;color:var(--gold)}
+details[open] summary:after{content:"\2212"}
+.cta{display:inline-block;margin-top:30px;padding:16px 26px;background:var(--gold2);color:#0B1D17;text-decoration:none;font-size:12px;font-weight:600;letter-spacing:.16em;text-transform:uppercase;border-radius:2px}
+.ft{background:var(--forest);color:rgba(246,241,228,.75);padding:34px 0;font-size:14px}
+.ft .in{max-width:1180px;margin:0 auto;padding:0 24px}.ft a{color:var(--gold2)}
+@media(max-width:860px){.wrap{grid-template-columns:1fr}.toc{display:none}}
+</style></head><body>
+<header class="hd"><div class="in"><a class="logo" href="../../">Healthy <em>Bowl</em></a><div class="r"><a href="../../navod/">SK</a><a href="../../">Back to website</a></div></div></header>
+<div class="hero"><div class="in"><div class="eb">User guide</div><h1>How to use <em>Healthy Bowl</em></h1><p class="lead">A short guide from the first launch to your shopping list. It takes about five minutes to read.</p></div></div>
+<div class="wrap"><nav class="toc" aria-label="Contents"><b>Contents</b><a href="#start">Quick start</a><a href="#today">Today&#x27;s bowl</a><a href="#calendar">365-day calendar</a><a href="#shopping">Shopping list</a><a href="#favourites">Favourites</a><a href="#progress">Progress charts</a><a href="#support">Support and the Lístok guide</a><a href="#settings">Settings and the top bar</a><a href="#faq">FAQ</a></nav>
+<article><section id="start"><span class="n">I</span><h2>Quick start</h2>
+<p>The app runs in your browser. Nothing to install from a store and no registration. Open it at <a href="https://healthybowl-api.onrender.com/">healthybowl-api.onrender.com</a>.</p>
+<p>On first launch a short guide welcomes you. You set your language and what you do not eat (allergens and intolerances). You can skip it and start it again any time in <b>Support</b>.</p>
+<h3>Add it to your phone's home screen</h3>
+<ul>
+<li><b>Android (Chrome):</b> three-dot menu, then <i>Add to Home screen</i> or <i>Install app</i>.</li>
+<li><b>iPhone (Safari):</b> the share button, then <i>Add to Home Screen</i>.</li>
+</ul>
+<p>After a new version, fully close the app once and open it again so the latest look loads.</p></section>
+<section id="today"><span class="n">II</span><h2>Today&#x27;s bowl</h2>
+<p>The home screen shows <b>one balanced bowl for today, 900 grams</b>. It is made of seven food groups in proportions based on WHO guidance. Every day is different, always balanced.</p>
+<h3>What you will find</h3>
+<ul>
+<li><b>Energy, Bowl price, Weight, Day streak:</b> a quick overview of today's bowl and how many days in a row you have used the app.</li>
+<li><b>Allergens:</b> numbers follow the list of 14 allergens that must be labelled under EU Regulation 1169/2011. If you mark what you avoid in settings, those ingredients are left out.</li>
+<li><b>Bowl composition:</b> photos of the ingredients with weight and price. Tap an ingredient for details.</li>
+<li><b>Your bowl in numbers:</b> a donut chart of how the bowl is split between food groups.</li>
+<li><b>Nutrient ratio:</b> share of carbohydrates, protein and fat. The marker shows where you are and the band shows the WHO range.</li>
+<li><b>How to prepare:</b> steps for each ingredient. Tick the finished ones and the ring shows progress.</li>
+<li><b>Check your ingredients:</b> mark what you already have at home and buy only the rest.</li>
+<li><b>How was your day:</b> a short daily note on mood and whether you ate the bowl.</li>
+<li><b>Last 7 days:</b> quick access to previous bowls.</li>
+</ul>
+<h3>Buttons at the top</h3>
+<ul>
+<li><b>Share:</b> sends today's bowl to friends.</li>
+<li><b>Generate again:</b> creates a different bowl if you do not like today's.</li>
+<li><b>Star:</b> saves the bowl to favourites.</li>
+</ul></section>
+<section id="calendar"><span class="n">III</span><h2>365-day calendar</h2>
+<p>A bowl is ready for every day of the next year. Pick any date, press <i>Show</i> and see that day's bowl with price and preparation. Useful for planning shopping and cooking several days ahead.</p></section>
+<section id="shopping"><span class="n">IV</span><h2>Shopping list</h2>
+<p>The app adds up all ingredients for the chosen period, sorted by store with a total price.</p>
+<ol>
+<li>Choose the period (from and to date) or press <i>This week</i>.</li>
+<li>Press <i>Create list</i>.</li>
+<li>Pick one store (Lidl, Tesco, Kaufland, Billa, CBA, COOP Jednota). The list shows all ingredients at once, so you do not need several stores.</li>
+<li>Tick items as you put them in the basket. Ingredients are grouped by category such as fruit, vegetables or protein.</li>
+</ol>
+<p>You can <b>share</b> or <b>copy</b> the list, open the store's e-shop or find the nearest shop. The total is at the bottom. Prices are indicative.</p></section>
+<section id="favourites"><span class="n">V</span><h2>Favourites</h2>
+<p>Bowls you starred are kept in one place. Come back to them any time, even if you no longer look for them in the calendar.</p></section>
+<section id="progress"><span class="n">VI</span><h2>Progress charts</h2>
+<p>An overview of how you are doing: current streak, number of recorded days, share of balanced days and number of different ingredients. Below are a chart of balanced days per week and a chart of ingredient variety over time. It is calculated only from days the app has already recorded, never from the future.</p></section>
+<section id="support"><span class="n">VII</span><h2>Support and the Lístok guide</h2>
+<p><b>Support</b> has frequently asked questions and a contact form if something does not work. <i>Show the guide again</i> restarts the welcome guide from the beginning.</p>
+<p>The small green leaf in the corner is the <b>Lístok guide</b>. It walks you through the main parts of the app step by step and can read them aloud.</p></section>
+<section id="settings"><span class="n">VIII</span><h2>Settings and the top bar</h2>
+<h3>Top bar</h3>
+<ul>
+<li><b>Circle with a letter and plus:</b> switch profiles or add another.</li>
+<li><b>Language:</b> Slovak, Czech, English, German, Hungarian, Polish, Swedish, Finnish, Russian, Ukrainian, Spanish and Portuguese.</li>
+<li><b>Moon or sun:</b> dark and light mode.</li>
+<li><b>Speaker:</b> reads the page aloud.</li>
+<li><b>Notes:</b> background music.</li>
+<li><b>Gear:</b> settings.</li>
+</ul>
+<h3>In settings</h3>
+<ul>
+<li><b>Family profiles:</b> add family members. A family profile combines everyone's allergens into one bowl and multiplies the shopping list by the number of members.</li>
+<li><b>Intolerances and allergens:</b> mark what you avoid.</li>
+<li><b>Address:</b> sets region, stores and prices by your city. Slovakia, Czechia, Austria, the United Kingdom and Japan are supported.</li>
+<li><b>Text size:</b> normal, larger or largest.</li>
+<li><b>Season and region:</b> prefers ingredients that are in season.</li>
+<li><b>Reminders:</b> lunch reminder and drinking water (3 times a day).</li>
+<li><b>Data backup:</b> download a backup of profiles, favourites and settings and restore it on another device.</li>
+<li><b>Privacy:</b> <i>Delete my data</i> permanently removes your data from the device and the server.</li>
+</ul>
+<p>Confirm settings with <i>Apply</i>.</p></section>
+<section id="faq"><span class="n">IX</span><h2>FAQ</h2>
+<details><summary>How does the app choose today's bowl?</summary><p>It follows WHO ranges for protein, fat and carbohydrates. It does not repeat an ingredient within its category until all the others have been used. So every day is different but always balanced.</p></details>
+<details><summary>Why can't I choose what goes in the bowl?</summary><p>The app deliberately enforces variety instead of choosing by taste. Food is first of all nutrition for the body. If a bowl does not suit you, use <i>Generate again</i>.</p></details>
+<details><summary>How are prices calculated for my region?</summary><p>The app knows common stores and prices in Slovakia, Czechia, Austria, the United Kingdom and Japan. It converts the price by the address you set. Prices are indicative.</p></details>
+<details><summary>Is my data safe?</summary><p>The app stores only what you enter (allergies, address as text, possibly an e-mail) and does not share it with third parties. You can delete everything in settings at any time. Details are in the <a href="../../ochrana-osobnych-udajov/">privacy policy</a> (Slovak).</p></details>
+<details><summary>Do the nutrition guidelines work the same in every language?</summary><p>Yes. The ranges are based on WHO guidance, which applies universally. Only the language, prices and stores change.</p></details>
+<details><summary>Can I rely on the app with a food allergy?</summary><p>No. The app is not a medical device and does not replace a doctor or nutritionist. With an allergy, always check the ingredient yourself. The app does not guarantee fully accurate allergen data.</p></details>
+<details><summary>The app still looks old after an update.</summary><p>Your phone keeps a saved copy. Close the app fully (also from the recent apps list) and open it twice in a row.</p></details></section>
+<a class="cta" href="https://healthybowl-api.onrender.com/">Open the app</a></article></div>
+<footer class="ft"><div class="in"><p>Healthy Bowl is a tool for everyday balanced eating and does not replace professional medical advice.</p><p>Can't find an answer? Write to us at <a href="mailto:monika@healthybowl.sk">monika@healthybowl.sk</a></p></div></footer>
+</body></html>

@@ -300,3 +300,23 @@ h2 em{background:linear-gradient(90deg,var(--green-d),var(--green));-webkit-back
 
 @media(min-width:1100px){.vgrid{grid-template-columns:repeat(4,1fr);gap:26px}.vcard{padding:14px;border-radius:26px}}
 @media(min-width:861px) and (max-width:1099px){.vgrid{grid-template-columns:repeat(2,1fr)}}
+
+/* ===== desktop (>=1100px): sirsi obsah, nadpisy sekcii do dvoch stlpcov, tesnejsie medzery ===== */
+@media (min-width:1100px){
+  :root{--wrap:1260px}
+  .sec{padding:clamp(80px,7.5vw,112px) 0}
+  .sec-h{max-width:none;display:grid;grid-template-columns:minmax(0,1.2fr) minmax(0,.8fr);column-gap:72px;align-items:end;margin-bottom:56px}
+  .sec-h .eyebrow{grid-column:1/-1}
+  .sec-h h2{grid-column:1;margin:18px 0 0}
+  .sec-h p{grid-column:2;margin:0 0 10px;padding-left:26px;border-left:1px solid var(--gold-line);font-size:18px;line-height:1.65}
+  .sec.dark .sec-h p{border-left-color:rgba(214,178,106,.35)}
+  .hero h1{letter-spacing:-.025em}
+  .stage{max-width:620px}
+  .f,.step,.card{transition:transform .35s cubic-bezier(.2,.7,.2,1),box-shadow .35s}
+  .vgrid{gap:34px}
+  .faq{max-width:980px}
+}
+@media (min-width:1500px){
+  :root{--wrap:1340px}
+  .hero h1{font-size:clamp(76px,5.4vw,96px)}
+}

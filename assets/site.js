@@ -118,6 +118,9 @@
   $$(".vid").forEach(function (vid) {
     var pb = $(".play", vid), v = $("video", vid);
     if (!pb || !v) return;
+    /* bez tlacidla na stiahnutie, bez obrazu v obraze a bez menu pravym tlacidlom */
+    v.setAttribute("controlsList", "nodownload noremoteplayback"); v.disablePictureInPicture = true;
+    v.addEventListener("contextmenu", function (e) { e.preventDefault(); });
     pb.addEventListener("click", function () {
       $$(".vid video").forEach(function (o) { if (o !== v) o.pause(); });
       v.setAttribute("controls", ""); v.preload = "auto"; vid.classList.add("playing");

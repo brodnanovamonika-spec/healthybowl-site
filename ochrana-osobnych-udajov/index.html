@@ -260,6 +260,7 @@ var bs=document.querySelectorAll('.sw button');
 for(var i=0;i<bs.length;i++)bs[i].addEventListener('click',function(){var l=this.dataset.l;history.replaceState(null,'','#'+l);set(l);window.scrollTo(0,0)});
 window.addEventListener('hashchange',function(){var l=fromHash();if(l)set(l)});
 set(fromHash()||'sk');
+if(fromHash()){window.scrollTo(0,0);setTimeout(function(){window.scrollTo(0,0)},60)}
 })();
 </script>
 <noscript><style>.lg{display:block!important}.sw{display:none}</style></noscript>

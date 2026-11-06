@@ -49,6 +49,17 @@ section:after{content:"";display:block;clear:both}
 .ft{background:var(--forest);color:rgba(246,241,228,.75);padding:34px 0;font-size:14px}
 .ft .in{max-width:1180px;margin:0 auto;padding:0 24px}.ft a{color:var(--gold2)}
 @media(max-width:860px){.wrap{grid-template-columns:1fr}.toc{display:none}}
+.toc a.act{color:var(--ink);border-left-color:var(--gold);font-weight:500}
+.ft p{color:rgba(246,241,228,.78);margin:6px 0}
+@media(max-width:860px){.toc{display:flex;position:sticky;top:0;z-index:20;overflow-x:auto;gap:8px;background:var(--canvas);margin:0 -24px;padding:10px 24px;border-bottom:1px solid var(--line);white-space:nowrap}.toc b{display:none}.toc a{border:1px solid var(--line);border-radius:99px;padding:6px 14px;flex:none;font-size:13px}.toc a.act{background:var(--forest);color:var(--gold2);border-color:var(--forest)}}
+.prog{position:fixed;top:0;left:0;height:3px;width:0;background:var(--gold2);z-index:60}
+.totop{position:fixed;right:18px;bottom:18px;width:46px;height:46px;border-radius:50%;background:var(--forest);color:var(--gold2);border:1px solid var(--gold);font-size:20px;cursor:pointer;opacity:0;pointer-events:none;transition:opacity .25s;z-index:40}
+.totop.on{opacity:1;pointer-events:auto}
+.rel{display:grid;grid-template-columns:repeat(2,1fr);gap:14px;margin:50px 0 6px}
+.rel a{display:block;border:1px solid var(--line);background:var(--paper);padding:22px 24px;text-decoration:none;color:var(--ink);font-family:var(--serif);font-size:25px;line-height:1.1;transition:border-color .2s,transform .2s}
+.rel a:hover{border-color:var(--gold);transform:translateY(-2px)}
+.rel small{display:block;font:600 11px Inter,sans-serif;letter-spacing:.22em;text-transform:uppercase;color:var(--gold);margin-bottom:8px}
+@media(max-width:560px){.rel{grid-template-columns:1fr}}
 
 .lg{display:none}.lg.on{display:block}
 .sw{display:inline-flex;border:1px solid rgba(246,241,228,.35);border-radius:2px;margin-top:26px}
@@ -59,6 +70,7 @@ section:after{content:"";display:block;clear:both}
 article table{border-collapse:collapse;width:100%;font-size:15px;margin:16px 0}
 article td,article th{border-bottom:1px solid var(--line);padding:9px 10px;text-align:left;vertical-align:top}
 article th{font-size:11px;letter-spacing:.16em;text-transform:uppercase;color:var(--gold)}
+h1{font-size:clamp(38px,6vw,70px)}
 @media print{.hd,.toc,.sw,.ft,.cta{display:none}.hero{background:none;color:#000;padding:0}}
 </style></head><body>
 <header class="hd"><div class="in"><a class="logo" href="../">Healthy <em>Bowl</em></a><div class="r"><a href="../navod/" id="g">Návod</a><a href="../" id="b">Späť na web</a></div></div></header>
@@ -116,7 +128,7 @@ article th{font-size:11px;letter-spacing:.16em;text-transform:uppercase;color:va
 <section id="sk-s11"><span class="n">XI</span><h2>Záverečné ustanovenia</h2>
   <p>Tieto podmienky sa riadia právom Slovenskej republiky. Môžeme ich meniť; o podstatných zmenách vás upozorníme v aplikácii alebo e-mailom najmenej 14 dní pred ich účinnosťou. Ak so zmenou nesúhlasíte, predplatné môžete zrušiť pred jej účinnosťou. Aktuálne znenie je vždy na healthybowl.sk.</p>
 </section>
-</div>
+<div class="rel"><a href="../navod/"><small>Návod</small>Ako používať aplikáciu</a><a href="../ochrana-osobnych-udajov/"><small>Právne</small>Ochrana osobných údajov</a></div></div>
 <div class="lg" id="en" lang="en"><div class="tocsrc" hidden><a href="#en-s1">Provider</a><a href="#en-s2">What the app does and does not do</a><a href="#en-s3">Free and full version</a><a href="#en-s4">Price and payment</a><a href="#en-s5">Contract, duration and cancellation</a><a href="#en-s6">Right of withdrawal</a><a href="#en-s7">Availability and changes to the service</a><a href="#en-s8">Liability</a><a href="#en-s9">Complaints and dispute resolution</a><a href="#en-s10">Personal data</a><a href="#en-s11">Final provisions</a></div><div class="hsrc" hidden>Terms of Service, Healthy Bowl app</div><p class="upd">Effective from: 28 October 2026</p>
   
   
@@ -168,9 +180,10 @@ article th{font-size:11px;letter-spacing:.16em;text-transform:uppercase;color:va
 <section id="en-s11"><span class="n">XI</span><h2>Final provisions</h2>
   <p>These terms are governed by the law of the Slovak Republic. We may change them; we will notify you of material changes in the app or by e-mail at least 14 days before they take effect. If you do not agree with a change, you may cancel the subscription before it takes effect. The current version is always available at healthybowl.sk.</p>
 </section>
-</div>
+<div class="rel"><a href="../en/guide/"><small>User guide</small>How to use the app</a><a href="../ochrana-osobnych-udajov/#en"><small>Legal</small>Privacy policy</a></div></div>
 <a class="cta" id="cta" href="https://healthybowl-api.onrender.com/">Otvoriť aplikáciu</a></article></div>
 <footer class="ft"><div class="in"><p id="ft1">Healthy Bowl je pomôcka pre bežné vyvážené stravovanie a nenahrádza odbornú zdravotnú radu.</p><p><span id="ft2">Otázky k textu? Napíš nám na</span> <a href="mailto:monika@healthybowl.sk">monika@healthybowl.sk</a></p></div></footer>
+<script src="../assets/spy.js" defer></script>
 <script>
 (function(){
 var T={"sk": {"eb": "Právne informácie", "back": "Späť na web", "open": "Otvoriť aplikáciu", "toc": "Obsah", "g": "Návod", "gh": "../navod/", "foot": "Healthy Bowl je pomôcka pre bežné vyvážené stravovanie a nenahrádza odbornú zdravotnú radu.", "contact": "Otázky k textu? Napíš nám na", "upd": "Účinné od", "title": "Obchodné podmienky | Healthy Bowl"}, "en": {"eb": "Legal information", "back": "Back to site", "open": "Open the app", "toc": "Contents", "g": "User guide", "gh": "../en/guide/", "foot": "Healthy Bowl is an aid for everyday balanced eating and does not replace professional health advice.", "contact": "Questions about this text? Write to", "upd": "Effective from", "title": "Terms of Service | Healthy Bowl"}};
